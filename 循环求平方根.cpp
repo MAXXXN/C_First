@@ -1,17 +1,17 @@
 #include <stdio.h>
 #include <math.h>
 float mysqrt(float n) {
-	float x = n;
-	float y = 0;
+	float right = n;
+	float left = 0;
 	float ans = n/2;
 	while((ans*ans-n)>0.000001||(n-ans*ans)>0.000001) {
 		if (ans*ans > n+0.000001) {
-			x = ans;
-			ans = (x+y)/2;
+			right = ans;
+			ans = (right+left)/2;
 		}
 		else{
-			y = ans;
-			ans = (x+y)/2; 
+			left = ans;
+			ans = (right+left)/2; 
 		}
 	}
 	return ans;
