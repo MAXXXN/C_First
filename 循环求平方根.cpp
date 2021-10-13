@@ -20,6 +20,6 @@ int main() {
 	float n;
 	scanf("%f",&n);
 	n=mysqrt(n);
-	printf("平方根为：%f",n); 
+	printf("%f",n); 
 	return 0;
 } 
